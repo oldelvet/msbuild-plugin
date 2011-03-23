@@ -2,8 +2,6 @@ package hudson.plugins.msbuild;
 
 import org.kohsuke.stapler.DataBoundConstructor;
 
-import java.io.File;
-
 /**
  * MsBuild installation.
  * 
@@ -31,16 +29,5 @@ public final class MsBuildInstallation {
      */
     public String getName() {
         return name;
-    }
-
-    public File getExecutable() {
-        return new File(pathToMsBuild);
-    }
-    
-    /**
-     * Returns true if the executable exists.
-     */
-    public boolean getExists() {
-        return getExecutable().exists();
     }
 }
